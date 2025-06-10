@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/amino-aligner/static/css/main.216a672b.css",
+    "main.js": "/amino-aligner/static/js/main.d670ce24.js",
+    "static/js/453.0f4748fb.chunk.js": "/amino-aligner/static/js/453.0f4748fb.chunk.js",
+    "index.html": "/amino-aligner/index.html",
+    "main.216a672b.css.map": "/amino-aligner/static/css/main.216a672b.css.map",
+    "main.d670ce24.js.map": "/amino-aligner/static/js/main.d670ce24.js.map",
+    "453.0f4748fb.chunk.js.map": "/amino-aligner/static/js/453.0f4748fb.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.216a672b.css",
+    "static/js/main.d670ce24.js"
+  ]
+}

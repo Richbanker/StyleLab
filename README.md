@@ -1,5 +1,10 @@
 # StyleLab - Редактор дизайн-систем
 
+
+[![Просмотры README](https://vbr.nathanchung.dev/badge?page_id=Richbanker.StyleLab&text=README_Views)](https://github.com/Richbanker/StyleLab)
+
+[Открыть проект](https://rebrand.ly/richbanker-stylelab)
+
 [![React](https://img.shields.io/badge/React-19.1.0-blue.svg)](https://reactjs.org/)
 [![TypeScript](https://img.shields.io/badge/TypeScript-4.9.5-blue.svg)](https://www.typescriptlang.org/)
 [![Storybook](https://img.shields.io/badge/Storybook-9.0.4-FF4785.svg)](https://storybook.js.org/)

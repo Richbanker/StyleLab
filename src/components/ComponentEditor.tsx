@@ -25,8 +25,9 @@ export const ComponentEditor: React.FC<ComponentEditorProps> = ({ component, onS
       <div className="space-y-4">
         {Object.entries(styles).map(([key, value]) => (
           <div key={key} className="flex items-center space-x-2">
-            <label className="w-1/3 text-sm font-medium">{key}</label>
+            <label htmlFor={`style-${component.id}-${key}`} className="w-1/3 text-sm font-medium">{key}</label>
             <input
+              id={`style-${component.id}-${key}`}
               type="text"
               value={value}
               onChange={(e) => handleStyleChange(key, e.target.value)}

@@ -23,6 +23,7 @@ function App() {
     }
 
     try {
+      setPreviews({});
       const figmaService = new FigmaService(accessToken);
       const file = await figmaService.getFile(fileKey);
       setComponents(file.components);

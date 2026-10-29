@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { FigmaComponent } from '../types/figma';
 
 interface ComponentEditorProps {
@@ -9,6 +9,10 @@ interface ComponentEditorProps {
 
 export const ComponentEditor: React.FC<ComponentEditorProps> = ({ component, onStyleChange, previewUrl }) => {
   const [styles, setStyles] = useState(component.styles);
+
+  useEffect(() => {
+    setStyles(component.styles);
+  }, [component.id, component.styles]);
 
   const handleStyleChange = (key: string, value: string) => {
     const newStyles = { ...styles, [key]: value };

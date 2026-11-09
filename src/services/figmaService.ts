@@ -85,6 +85,8 @@ export class FigmaService {
   }
 
   async getPreviewImages(fileKey: string, nodeIds: string[]): Promise<{ [key: string]: string }> {
+    if (nodeIds.length === 0) return {};
+
     try {
       const ids = nodeIds.join(',');
       const response = await axios.get(

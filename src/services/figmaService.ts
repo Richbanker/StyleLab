@@ -12,7 +12,7 @@ export class FigmaService {
 
   async getFile(fileKey: string): Promise<FigmaFile> {
     try {
-      const response = await axios.get(`${FIGMA_API_URL}/files/${fileKey}`, {
+      const response = await axios.get(`${FIGMA_API_URL}/files/${encodeURIComponent(fileKey)}`, {
         headers: {
           'X-Figma-Token': this.accessToken
         }
@@ -88,7 +88,7 @@ export class FigmaService {
     try {
       const ids = nodeIds.join(',');
       const response = await axios.get(
-        `https://api.figma.com/v1/images/${fileKey}?ids=${ids}&format=png`,
+        `${FIGMA_API_URL}/images/${encodeURIComponent(fileKey)}?ids=${encodeURIComponent(ids)}&format=png`,
         {
           headers: {
             'X-Figma-Token': this.accessToken,

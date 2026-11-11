@@ -95,7 +95,7 @@ export class FigmaService {
           },
         }
       );
-      return response.data.images;
+      return response.data.images ?? {};
     } catch (error) {
       console.error('Error fetching preview images:', error);
       return {};

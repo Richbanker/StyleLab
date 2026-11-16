@@ -58,8 +58,9 @@ function App() {
 
         <div className="mb-8 space-y-4">
           <div>
-            <label className="block text-sm font-medium mb-2">Figma Access Token</label>
+            <label htmlFor="figma-access-token" className="block text-sm font-medium mb-2">Figma Access Token</label>
             <input
+              id="figma-access-token"
               type="password"
               value={accessToken}
               onChange={(e) => setAccessToken(e.target.value)}
@@ -69,8 +70,9 @@ function App() {
           </div>
 
           <div>
-            <label className="block text-sm font-medium mb-2">Figma File Key</label>
+            <label htmlFor="figma-file-key" className="block text-sm font-medium mb-2">Figma File Key</label>
             <input
+              id="figma-file-key"
               type="text"
               value={fileKey}
               onChange={(e) => setFileKey(e.target.value)}

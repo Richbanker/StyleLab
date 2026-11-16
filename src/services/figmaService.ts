@@ -46,7 +46,7 @@ export class FigmaService {
       });
     }
 
-    if (node.children) {
+    if (Array.isArray(node.children)) {
       node.children.forEach((child: any) => {
         components.push(...this.extractComponents(child));
       });

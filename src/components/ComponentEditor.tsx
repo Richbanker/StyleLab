@@ -20,7 +20,7 @@ export const ComponentEditor: React.FC<ComponentEditorProps> = ({ component, onS
     <div className="p-4 border rounded-lg shadow-sm">
       <h3 className="text-lg font-semibold mb-4">{component.name}</h3>
       {previewUrl && (
-        <img src={previewUrl} alt={component.name} className="mb-4 rounded shadow" />
+        <img loading="lazy" decoding="async" src={previewUrl} alt={component.name} className="mb-4 rounded shadow" />
       )}
       <div className="space-y-4">
         {Object.entries(styles).map(([key, value]) => (

@@ -17,6 +17,7 @@ export const ThemeToggle: React.FC<ThemeToggleProps> = ({ isDarkMode, onToggle }
       {isDarkMode ? (
         <svg
           className="w-6 h-6 text-yellow-500"
+          aria-hidden="true"
           fill="none"
           stroke="currentColor"
           viewBox="0 0 24 24"
@@ -31,6 +32,7 @@ export const ThemeToggle: React.FC<ThemeToggleProps> = ({ isDarkMode, onToggle }
       ) : (
         <svg
           className="w-6 h-6 text-gray-700"
+          aria-hidden="true"
           fill="none"
           stroke="currentColor"
           viewBox="0 0 24 24"

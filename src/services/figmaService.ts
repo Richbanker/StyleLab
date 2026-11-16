@@ -29,7 +29,7 @@ export class FigmaService {
     return {
       name: data.name,
       lastModified: data.lastModified,
-      components: this.extractComponents(data.document)
+      components: data.document ? this.extractComponents(data.document) : []
     };
   }
 

@@ -23,14 +23,14 @@ function App() {
     }
 
     try {
-      const figmaService = new FigmaService(accessToken);
-      const file = await figmaService.getFile(fileKey);
+      const figmaService = new FigmaService(accessToken.trim());
+      const file = await figmaService.getFile(fileKey.trim());
       setComponents(file.components);
 
       // Получаем превью для всех компонентов
       const nodeIds = file.components.map((c) => c.id);
       if (nodeIds.length > 0) {
-        const images = await figmaService.getPreviewImages(fileKey, nodeIds);
+        const images = await figmaService.getPreviewImages(fileKey.trim(), nodeIds);
         setPreviews(images);
       } else {
         setPreviews({});

@@ -10,8 +10,9 @@ export const ThemeToggle: React.FC<ThemeToggleProps> = ({ isDarkMode, onToggle }
     <button
       type="button"
       onClick={onToggle}
-      aria-pressed={isDarkMode}
-      className="fixed bottom-4 right-4 p-3 rounded-full bg-gray-200 dark:bg-gray-700 hover:bg-gray-300 dark:hover:bg-gray-600 transition-colors"
+      role="switch"
+      aria-checked={isDarkMode}
+      className="fixed bottom-4 right-4 p-3 rounded-full bg-gray-200 dark:bg-gray-700 hover:bg-gray-300 dark:hover:bg-gray-600 transition-colors focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-600"
       aria-label="Тёмная тема"
     >
       {isDarkMode ? (

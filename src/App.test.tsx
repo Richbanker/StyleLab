@@ -2,8 +2,10 @@ import React from 'react';
 import { render, screen } from '@testing-library/react';
 import App from './App';
 
-test('renders learn react link', () => {
+test('renders the import form and disables import until credentials are entered', () => {
   render(<App />);
-  const linkElement = screen.getByText(/learn react/i);
-  expect(linkElement).toBeInTheDocument();
+  expect(screen.getByRole('heading', { name: 'StyleLab' })).toBeInTheDocument();
+  expect(screen.getByLabelText('Figma Access Token')).toBeInTheDocument();
+  expect(screen.getByLabelText('Figma File Key')).toBeInTheDocument();
+  expect(screen.getByRole('button', { name: 'Импортировать компоненты' })).toBeDisabled();
 });
